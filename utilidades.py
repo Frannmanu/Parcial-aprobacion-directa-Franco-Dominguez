@@ -11,25 +11,11 @@ def mostrar_menu():
     opcion = input("Seleccione una opción: ")
     return opcion
 
-def ingresar_contrasena():
-    contrasena = input("Ingrese la contraseña: ")
-
-    if contrasena == "":
-        print("La contraseña no puede estar vacía")
-        contrasena = ingresar_contrasena()
-
-    elif len(contrasena) < 8:
-        print("La contraseña debe tener al menos 8 caracteres")
-        contrasena = ingresar_contrasena()
-
-    elif contrasena [0] == " ":
-        print("La contraseña no puede comenzar con un espacio en blanco")
-        contrasena = ingresar_contrasena()
-    else: 
-        for caracter in contrasena:
-            if ("a" <= caracter <= "z") or ("A" <= caracter <= "Z"):
-                break
-        else:
-            print("La contraseña debe contener al menos un caracter alfabetico")
-            contrasena = ingresar_contrasena()
-    return contrasena
+def mostrar_contrasena_invertida(contrasena):
+    largo = len(contrasena)
+    invertida = ""
+    
+    for indice in range(largo - 1, -1, -1):
+        invertida = invertida + contrasena[indice]
+        
+    print("\nContraseña invertida:", invertida)
