@@ -1,2 +1,3 @@
-# Prueba validaciones
-print("hola mundo")
+from utilidades import mostrar_menu as menu
+
+menu()
