@@ -2,8 +2,10 @@ from utilidades import mostrar_menu as menu, mostrar_contrasena_invertida as inv
 from validaciones import ingresar_contrasena as ingresar, validar_nivel_seguridad as validar
 from analisis import contar_tipos_caracteres as contador, buscar_caracter_especifico as buscar, verificar_palindromo as verificar, ordenar_contrasena as ordenar
 from estadisticas import reporte_estadistico as estadistica
+
 contraseña_nueva = ""
 continuar = "si"
+
 while continuar == "si":
     opcion = menu()
 
