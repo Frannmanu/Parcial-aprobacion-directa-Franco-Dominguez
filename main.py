@@ -1,6 +1,6 @@
 from utilidades import mostrar_menu as menu, mostrar_contrasena_invertida as invertir
 from validaciones import ingresar_contrasena as ingresar, validar_nivel_seguridad as validar
-from analisis import contar_tipos_caracteres as contador, buscar_caracter_especifico as buscar, verificar_palindromo as verificar
+from analisis import contar_tipos_caracteres as contador, buscar_caracter_especifico as buscar, verificar_palindromo as verificar, ordenar_contrasena as ordenar
 from estadisticas import reporte_estadistico as estadistica
 contraseña_nueva = ""
 continuar = "si"
@@ -42,7 +42,12 @@ while continuar == "si":
                 print("\n---Primero debe ingresar una contraseña en opcion 1!---\n")
             else:
                 verificar(contraseña_nueva)
-        case "8": # Salir
+        case "8": # Ordenar caracteres de la contraseña
+            if contraseña_nueva == "":
+                print("\n---Primero debe ingresar una contraseña en opcion 1!---\n")
+            else:
+                ordenar(contraseña_nueva)
+        case "9": # Salir
             print("\n---Gracias por usar el programa!---\n")
             continuar = "no"
         case _:

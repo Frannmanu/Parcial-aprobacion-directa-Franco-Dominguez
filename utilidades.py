@@ -1,6 +1,6 @@
 def mostrar_menu() -> str:
     """
-    Muestra en la consola el menú principal con las 8 opciones disponibles
+    Muestra en la consola el menú principal con las 9 opciones disponibles
     y solicita al usuario que ingrese una opción.
     
     Returns:
@@ -15,7 +15,8 @@ def mostrar_menu() -> str:
     print("5. Mostrar contraseña invertida")
     print("6. Generar reporte estadístico")
     print("7. Verificar si es palindromo")
-    print("8. Salir")
+    print("8. Ordenar caracteres de la contraseña")
+    print("9. Salir")
 
     opcion = input("Seleccione una opción: ")
     return opcion

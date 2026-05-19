@@ -93,3 +93,31 @@ def verificar_palindromo(contrasena : str) -> None:
         print("\nLa contraseña es un palíndromo.\n")
     else:
         print("\nLa contraseña NO es un palíndromo.\n")
+
+def ordenar_contrasena(contrasena: str) -> None:
+    """
+    Convierte la contraseña en una lista de caracteres de manera manual,
+    se utiliza el Bubble Sort (Burbuja) para ordenar
+    los caracteres de mayor a menor según su valor e imprime el resultado.
+
+    Args:
+        contrasena (str): La contraseña que se va a ordenar.
+    """
+    lista_caracteres = []
+    for caracter in contrasena:
+        lista_caracteres = lista_caracteres + [caracter]
+        
+    n = len(lista_caracteres)
+    
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if lista_caracteres[j] < lista_caracteres[j + 1]: # ordena Mayor a Menor
+                auxiliar = lista_caracteres[j]
+                lista_caracteres[j] = lista_caracteres[j + 1]
+                lista_caracteres[j + 1] = auxiliar
+                
+    contrasena_ordenada = ""
+    for caracter in lista_caracteres:
+        contrasena_ordenada = contrasena_ordenada + caracter
+        
+    print(f"\n Contraseña ordenada (Mayor a Menor): {contrasena_ordenada}\n")
