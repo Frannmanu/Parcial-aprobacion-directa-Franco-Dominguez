@@ -1,4 +1,12 @@
-def reporte_estadistico(contrasena):
+def reporte_estadistico(contrasena : str) -> None:
+    """
+    Genera y muestra por consola un informe detallado con las métricas
+    de la contraseña, incluyendo su longitud total y el desglose
+    por cantidad de letras, números y símbolos válidos.
+
+    Args:
+        contrasena (str): La contraseña activa en el sistema que se va a evaluar.
+    """
     largo = len(contrasena)
     print("\n--- Reporte Estadístico ---\n")
     print(f"Longitud de la contraseña: {largo} caracteres\n")

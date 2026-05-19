@@ -1,4 +1,12 @@
-def contar_tipos_caracteres(contrasena):
+def contar_tipos_caracteres(contrasena : str) -> None:
+    """
+    Realiza un escaneo y conteo manual carácter por carácter sobre la contraseña
+    para clasificar y mostrar cuántas letras, números, símbolos específicos y
+    espacios en blanco tiene.
+
+    Args:
+        contrasena (str): La contraseña que se va a analizar.
+    """
     cant_letras = 0
     cant_numeros = 0
     cant_simbolos = 0
@@ -28,7 +36,15 @@ def contar_tipos_caracteres(contrasena):
     print(f"Cantidad de espacios:{cant_espacios}\n")
 
 
-def buscar_caracter_especifico(contrasena):
+def buscar_caracter_especifico(contrasena : str) -> None:
+    """
+    Solicita al usuario un carácter por teclado y realiza una búsqueda manual
+    carácter por carácter dentro de la contraseña, informando la cantidad total de apariciones
+    y una secuencia de una cadena con los índices exactos de sus posiciones.
+
+    Args:
+        contrasena (str): La contraseña sobre la cual realizar la búsqueda.
+    """
     caracter_buscado = input("Ingrese el carácter que desea buscar: ")
 
     cant_veces = 0
@@ -51,7 +67,15 @@ def buscar_caracter_especifico(contrasena):
         print("\nNo se encontraron coincidencias.\n")
         
 
-def verificar_palindromo(contrasena):
+def verificar_palindromo(contrasena : str) -> None:
+    """
+    Verifica si la contraseña es un palíndromo (se lee igual
+    de izquierda a derecha que de derecha a izquierda), invirtiendo la cadena
+    y comparando secuencialmente cada uno de sus componentes indexados.
+
+    Args:
+        contrasena (str): La contraseña que se va a evaluar.
+    """
     largo = len(contrasena)
     invertida = ""
 
@@ -59,7 +83,7 @@ def verificar_palindromo(contrasena):
 
         caracter = contrasena[i]
         invertida = caracter + invertida
-        letras_iguales = 0
+    letras_iguales = 0
 
     for i in range(largo):
         if contrasena[i] == invertida[i]:

@@ -1,4 +1,17 @@
-def ingresar_contrasena():
+def ingresar_contrasena() -> str:
+    """
+    Solicita al usuario el ingreso de una contraseña por consola y aplica 
+    validaciones secuenciales obligatorias para asegurar su calidad.
+    
+    Validaciones:
+        - No puede estar vacía.
+        - Debe tener al menos 8 caracteres de longitud.
+        - No puede iniciar con un espacio.
+        - Debe tener como mínimo un carácter alfabético (letra).
+
+    Returns:
+        str: La contraseña válida que cumple con todos los requisitos.
+    """
     contrasena = input("Ingrese la contrasena: ")
     
     if contrasena == "":
@@ -25,7 +38,20 @@ def ingresar_contrasena():
             
     return contrasena
 
-def validar_nivel_seguridad(contrasena):
+def validar_nivel_seguridad(contrasena : str) -> None:
+    """
+    Realiza un análisis de los componentes de la contraseña con
+    un recorrido manual y clasifica su nivel de seguridad en Débil, Media o Fuerte.
+    
+    Criterios de clasificación:
+        - Débil: Longitud de 8 a 9 caracteres compuestos únicamente por letras.
+        - Media: Contiene letras y números (sin importar el largo o símbolos).
+        - Fuerte: Al menos 12 caracteres, con letras, números y símbolos permitidos.
+        - No clasificado: No encaja estrictamente en los grupos anteriores.
+
+    Args:
+        contrasena (str): La contraseña que se va a evaluar.
+    """
     largo = len(contrasena)
     cant_letras = 0
     cant_numeros = 0
