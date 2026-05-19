@@ -45,3 +45,5 @@ while continuar == "si":
         case "8": # Salir
             print("\n---Gracias por usar el programa!---\n")
             continuar = "no"
+        case _:
+            print("\n---Opcion no valida!---\n")
