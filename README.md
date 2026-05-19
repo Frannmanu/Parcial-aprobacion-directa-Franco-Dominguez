@@ -31,7 +31,7 @@ El sistema cuenta con un menú interactivo que ofrece las siguientes opciones:
 5. **Mostrar contraseña invertida:** Reconstruye e imprime la contraseña al revés.
 6. **Generar reporte estadístico:** Presenta un resumen de la longitud total y el conteo de los componentes.
 7. **Verificar si es palíndromo:** Verifica si la contraseña se lee igual en ambos sentidos.
-8. **Ordenar caracteres de la contraseña:** (Próxima implementación) Ordenamiento de elementos mediante algoritmos como *Bubble Sort*.
+8. **Ordenar caracteres de la contraseña:** Ordenamiento de elementos mediante algoritmos como *Bubble Sort*.
 9. **Salir:** Termina el ciclo del programa y al usuario.
 
 ---
