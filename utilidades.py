@@ -15,7 +15,7 @@ def mostrar_contrasena_invertida(contrasena):
     largo = len(contrasena)
     invertida = ""
     
-    for indice in range(largo - 1, -1, -1):
-        invertida = invertida + contrasena[indice]
+    for i in range(largo - 1, -1, -1):
+        invertida = invertida + contrasena[i]
         
     print("\nContraseña invertida:", invertida)

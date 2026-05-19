@@ -25,7 +25,7 @@ def contar_tipos_caracteres(contrasena):
     print(f"Cantidad de letras:{cant_letras}")
     print(f"Cantidad de números:{cant_numeros}")
     print(f"Cantidad de símbolos:{cant_simbolos}")
-    print(f"Cantidad de espacios:{cant_espacios}")
+    print(f"Cantidad de espacios:{cant_espacios}\n")
 
 
 def buscar_caracter_especifico(contrasena):
@@ -42,10 +42,30 @@ def buscar_caracter_especifico(contrasena):
             
         indice = indice + 1
 
-    print("\n--- Resultado de la búsqueda ---")
-    print(f"\nAparece: {cant_veces} veces.")
+    print("\n--- Resultado de la búsqueda ---\n")
+    print(f"\nAparece: {cant_veces} veces.\n")
     
     if cant_veces > 0:
         print(f"Posiciones: {posiciones}\n")
     else:
-        print("No se encontraron coincidencias.")
+        print("\nNo se encontraron coincidencias.\n")
+        
+
+def verificar_palindromo(contrasena):
+    largo = len(contrasena)
+    invertida = ""
+
+    for i in range(largo):
+
+        caracter = contrasena[i]
+        invertida = caracter + invertida
+        letras_iguales = 0
+
+    for i in range(largo):
+        if contrasena[i] == invertida[i]:
+            letras_iguales = letras_iguales + 1
+
+    if letras_iguales == largo:
+        print("\nLa contraseña es un palíndromo.\n")
+    else:
+        print("\nLa contraseña NO es un palíndromo.\n")

@@ -2,15 +2,15 @@ def ingresar_contrasena():
     contrasena = input("Ingrese la contrasena: ")
     
     if contrasena == "":
-        print("La contraseña no puede estar vacía")
+        print("La contraseña no puede estar vacía\n")
         contrasena = ingresar_contrasena()
         
     elif len(contrasena) < 8:
-        print("La contraseña debe tener al menos 8 caracteres")
+        print("La contraseña debe tener al menos 8 caracteres\n")
         contrasena = ingresar_contrasena()
         
     elif contrasena[0] == " ":
-        print("La contraseña no puede comenzar con un espacio en blanco")
+        print("La contraseña no puede comenzar con un espacio en blanco\n")
         contrasena = ingresar_contrasena()
         
     else:
@@ -20,7 +20,7 @@ def ingresar_contrasena():
                 cant_letras = cant_letras + 1
                 
         if cant_letras == 0:
-            print("La contraseña debe contener al menos un caracter alfabetico")
+            print("\nLa contraseña debe contener al menos un caracter alfabetico\n")
             contrasena = ingresar_contrasena()
             
     return contrasena
@@ -46,13 +46,13 @@ def validar_nivel_seguridad(contrasena):
 
     
     if largo >= 12 and cant_letras > 0 and cant_numeros > 0 and cant_simbolos > 0:
-        print("\nLa contraseña es de nivel: Fuerte")
+        print("\nLa contraseña es de nivel: Fuerte\n")
         
     elif cant_letras > 0 and cant_numeros > 0:
-        print("\nLa contraseña es de nivel: Media")
+        print("\nLa contraseña es de nivel: Media\n")
         
     elif (largo >= 8 and largo <= 9) and cant_letras == largo:
-        print("\nLa contraseña es de nivel: Débil")
+        print("\nLa contraseña es de nivel: Débil\n")
         
     else:
-        print("\nLa contraseña es de nivel: No clasificado")
+        print("\nLa contraseña es de nivel: No clasificado\n")
