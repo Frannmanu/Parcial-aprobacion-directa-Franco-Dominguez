@@ -31,3 +31,6 @@ def reporte_estadistico(contrasena : str) -> None:
     print(f"Cantidad de letras: {cant_letras}")
     print(f"Cantidad de números: {cant_numeros}")
     print(f"Cantidad de símbolos: {cant_simbolos}\n")
+    print(f"El porcentaje de letras es: {cant_letras / largo * 100}%\n")
+    print(f"El porcentaje de numeros es: {cant_numeros / largo * 100}%\n")
+    print(f"El porcentaje de simbolos es: {cant_simbolos / largo * 100}%\n")
